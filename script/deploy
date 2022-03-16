@@ -1,5 +1,5 @@
 #!/bin/sh
-ssh  ubuntu@ec2-54-86-55-166.compute-1.amazonaws.com <<EOF
+sudo ssh -i ../AWSClave.pem ubuntu@ec2-54-86-55-166.compute-1.amazonaws.com <<EOF
     cd ..
     git pull https://github.com/Brayan55555/laboratoriopractico.git
     curl -o-   https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh    | bash
