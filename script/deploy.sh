@@ -1,4 +1,4 @@
-cd
+
 git clone https://github.com/Brayan55555/laboratoriopractico.git
 # docker-compose -f Jenkins.yml up -d
 
