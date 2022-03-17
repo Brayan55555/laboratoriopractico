@@ -1,5 +1,5 @@
 
-!/bin/sh
+!/bin/sh -xe
 sudo ssh -i ubuntu@ec2-54-86-55-166.compute-1.amazonaws.com <<EOF  
     git clone https://github.com/Brayan55555/laboratoriopractico.git
 EOF
