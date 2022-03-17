@@ -1,15 +1,6 @@
-
 #!/bin/sh 
-ssh -i ../clave.pem  ubuntu@ec2-54-86-55-166.compute-1.amazonaws.com <<EOF  
-    cd ~/laboratoriopractico
-    git pull https://github.com/Brayan55555/laboratoriopractico.git
-    docker-compose -f Jenkins.yml up -d
-EOF
-
-
-# git clone https://github.com/Brayan55555/laboratoriopractico.git
-# docker-compose -f Jenkins.yml up -d
-
-# docker logs Jenkins
-# docker-compose -f node.yml up -d
-# docker ps
+ssh -i ../clave.pem  ubuntu@ec2-54-86-55-166.compute-1.amazonaws.com 'git pull https://github.com/Brayan55555/laboratoriopractico.git'
+ssh -i ../clave.pem  ubuntu@ec2-54-86-55-166.compute-1.amazonaws.com 'sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose'
+ssh -i ../clave.pem  ubuntu@ec2-54-86-55-166.compute-1.amazonaws.com 'sudo chmod +x /usr/local/bin/docker-compose'
+ssh -i ../clave.pem  ubuntu@ec2-54-86-55-166.compute-1.amazonaws.com 'docker-compose --version'
+ssh -i ../clave.pem  ubuntu@ec2-54-86-55-166.compute-1.amazonaws.com 'sudo docker-compose -f laboratoriopractico/Jenkins.yml up -d'
