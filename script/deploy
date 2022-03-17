@@ -5,8 +5,7 @@ sudo ssh -i ubuntu@ec2-54-86-55-166.compute-1.amazonaws.com <<EOF
     docker-compose -f Jenkins.yml up -d
 EOF
 
-# cd
-# git clone https://github.com/Brayan55555/laboratoriopractico.git
+
 # docker-compose -f Jenkins.yml up -d
 
 # docker logs Jenkins
